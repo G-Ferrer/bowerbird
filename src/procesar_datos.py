@@ -375,6 +375,8 @@ def mejor_baraja_fuerza_bruta_main():
     # Número de CPU's que voy a usar
     cpus = elegir_cantidad_cpus()
 
+    print ' Esto puede llevar un rato (10 minutos en un i7 usando 5 núcleos) \n\n'
+
     if cpus < len(cartas):
         # Lista estilo [['comb_inicial_1', 'comb_final_1'], ['comb_inicial_2', 'comb_final_2'], ... ]
         lista_comb_repartidas = crear_lista_reparto(combinacion_total_barajas, cpus)
