@@ -1,5 +1,7 @@
 # bowerbird
-Permite obtener datos del uso de cartas y barajas de Clash Royale a partir de capturas de pantalla de TV Royale.
+Permite obtener datos del uso de cartas y barajas de Clash Royale a partir de capturas de pantalla de TV Royale. También facilita la visualización de los datos con VOSViewer (www.vosviewer.com).
+
+Contacto: gferrergithub@gmail.com
 
 /////////////////////////////////////////////////
 
