@@ -29,6 +29,7 @@ from subprocess import call
 import recortar_capturas
 import identificar_capturas
 import procesar_datos
+import visualizar_datos
 
 ruta_principal = os.path.abspath(os.path.dirname(sys.argv[0]))
 
@@ -45,14 +46,15 @@ def menu_principal():
     print " 1. Recortar Capturas"
     print " 2. Identificar Cartas"
     print " 3. Procesar Datos"
+    print " 4. Visualizar Datos con VOSViewer"
 
     if os.path.exists(ruta_principal + '/src/config.py'):
-        print " 4. Configuración"
+        print " 5. Configuración"
         if os.path.exists(ruta_principal + '/src/ayuda.py'):
-            print " 5. Ayuda"
+            print " 6. Ayuda"
     else:
         if os.path.exists(ruta_principal + '/src/ayuda.py'):
-            print " 4. Ayuda"
+            print " 5. Ayuda"
 
     print "\n 0. Salir"
 
@@ -109,6 +111,10 @@ def comprobacion_carpetas_y_archivos():
         raise SystemExit
     if not os.path.exists(ruta_principal + '/src/procesar_datos.py'):
         print ' No se encuentra %s/src/procesar_datos.py\n' % ruta_principal
+        raw_input(" Pulse enter para salir...")
+        raise SystemExit
+    if not os.path.exists(ruta_principal + '/src/visualizar_datos.py'):
+        print ' No se encuentra %s/src/visualizar_datos.py\n' % ruta_principal
         raw_input(" Pulse enter para salir...")
         raise SystemExit
     if not os.path.exists(ruta_principal + '/src/imprimir_lista_cartas.py'):
@@ -180,6 +186,15 @@ def ayuda():
     menu_ejecucion('9')
 
 
+def visualizar():
+    print " VISUALIZAR DATOS CON VOSVIEWER\n"
+
+    visualizar_datos.visualizar_main()
+
+    raw_input(" Pulse enter para volver...")
+    menu_ejecucion('9')
+
+
 def atras():
     menu_principal()
  
@@ -193,6 +208,7 @@ acciones_menu_principal = {
     '1': recortar,
     '2': identificar,
     '3': procesar,
+    '4': visualizar,
     '9': atras,
     '0': salir,
 }
@@ -205,11 +221,11 @@ if __name__ == "__main__":
     comprobacion_carpetas_y_archivos()
 
     if os.path.exists(ruta_principal + '/src/config.py'):
-        acciones_menu_principal['4'] = configuracion
+        acciones_menu_principal['5'] = configuracion
         if os.path.exists(ruta_principal + '/src/ayuda.py'):
-            acciones_menu_principal['5'] = ayuda
+            acciones_menu_principal['6'] = ayuda
     else:
         if os.path.exists(ruta_principal + '/src/ayuda.py'):
-            acciones_menu_principal['4'] = ayuda
+            acciones_menu_principal['5'] = ayuda
 
     menu_principal()
