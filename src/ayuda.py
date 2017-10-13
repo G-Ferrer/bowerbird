@@ -67,12 +67,11 @@ def menu_ayuda():
     elif eleccion == '4':
         os.system('clear')
         print " SOBRE BOWERBIRD\n"
-        print ' BowerBird es un programa para recortar capturas de'
-        print ' TV Royale, de Clash Royale (Sony Xperia M2), identificar'
-        print ' las cartas y crear un archivo para la visualización'
-        print ' de los datos de cantidad y relaciones entre cartas'
-        print ' mediante VOSViewer o el procesado de información'
-        print ' desde dentro de BowerBird\n'
+        print ' BowerBird es un programa que permite obtener datos del'
+        print ' uso de cartas y barajas de Clash Royale a partir de'
+        print ' capturas de pantalla de TV Royale. También facilita'
+        print ' la visualización de los datos con VOSViewer (www.vosviewer.com).\n'
+        print ' Contacto: gferrergithub@gmail.com\n'
         raw_input(" Pulse enter para volver...")
         menu_ayuda()
     elif eleccion == '0':
