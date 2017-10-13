@@ -11,7 +11,7 @@ Contacto: gferrergithub@gmail.com
 
 /////////////////////////////////////////////////
 
-- DEPENDENCIAS: PIL (instalar Pillow, ya que PIL com tal desapareció).
+- DEPENDENCIAS: PIL (instalar Pillow, ya que PIL como tal desapareció).
 
 /////////////////////////////////////////////////
 
